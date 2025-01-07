@@ -1,0 +1,18 @@
+Exp 5 PAT
+
+CLI
+
+en
+config t
+int f0/0
+ip nat inside
+exit
+int f0/1
+ip nat outside
+exit
+access-list 10 permit 192.168.0.0 0.0.0.255
+no ip nat inside source list 10 pool CN1
+ip nat inside source list 10 int Fa0/1 overload
+exit
+show ip nat translations
+debug ip nat

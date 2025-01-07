@@ -1,0 +1,25 @@
+Exp 4  Static NAT
+
+CLI
+
+en
+config t
+int f0/0
+ip nat inside
+exit
+int f0/1
+ip nat outside
+exit
+ip nat inside source static (private ip)(public ip)
+exit
+show ip nat translations
+debug ip nat
+
+
+Static Routes
+Network:192.168.20.0(other)
+Mask:255.255.255.0
+Next Hop: 192.168.3.3(other)
+
+RIP(single router)
+Network:192.168.10.0

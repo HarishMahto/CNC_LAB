@@ -1,0 +1,25 @@
+Exp 7 FTP
+
+server--service--FTP
+username=harry
+password=pass
+
+pc--text editor--save.txt
+
+Command Prompt:
+
+PC0:
+
+dir
+ftp (server ip)
+username:
+password:
+put save.txt 
+
+PC1:
+
+ftp (server ip)
+username:
+password:
+get save.txt
+dir

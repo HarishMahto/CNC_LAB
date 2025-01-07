@@ -1,0 +1,21 @@
+Exp 7 Telnet
+
+CLI
+en
+config t
+enable secret <password1>
+int gig0/0/0
+ip add 192.168.10.4 255.255.255.0
+no shut
+line vty 0 4
+login
+password <password2>
+exit
+exit
+
+
+PC--Command Prompt
+telnet <router ip>
+password: <password2>
+en
+password: <password1>
